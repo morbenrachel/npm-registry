@@ -1,0 +1,29 @@
+.app {
+  display: grid;
+  margin: 1rem;
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.top-container {
+  border: 3px solid black;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.no-results {
+  text-align: center;
+}
+
+.drop-down {
+  margin-bottom: 20px;
+}
+.drop-down-list {
+  margin-bottom: 20px;
+}

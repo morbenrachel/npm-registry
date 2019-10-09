@@ -1,0 +1,76 @@
+.ad-container {
+  display: grid;
+  grid-template-areas:
+    "icon  title title title right"
+    "icon  tag tag none token"
+    "icon  caption caption none token"
+    "icon  offer offer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  border: 1px solid gray;
+  justify-items: left;
+  justify-content: left;
+  /* align-items: left; */
+}
+
+.ad-container:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+}
+
+.icon {
+  grid-area: icon;
+  margin-top: 10px;
+  width: 130px;
+  height: 130px;
+}
+.caption {
+  grid-area: caption;
+  max-width: 400px;
+  min-width: 400px;
+  overflow-wrap: break-word;
+  color: gray;
+}
+.title {
+  grid-area: title;
+  font-weight: 700;
+  color: gray;
+}
+.tag-box {
+  grid-area: tag;
+}
+.tag {
+  display: inline-block;
+  background-color: rgb(170, 168, 168);
+  padding: 5px;
+  border-radius: 15%;
+  margin: 5px;
+}
+.offer {
+  grid-area: offer;
+  background-color: orange;
+  padding: 5px;
+  color: white;
+}
+.token {
+  grid-area: token;
+  background-color: limegreen;
+  padding: 5px;
+  border-radius: 15%;
+  color: white;
+  font-weight: 500;
+  min-width: 80px;
+  max-height: 50px;
+}
+
+.token-image {
+  max-width: 35px;
+  max-height: 35px;
+  margin: 3px;
+}
