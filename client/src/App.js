@@ -85,8 +85,12 @@ export default class App extends React.Component {
   }
 
   getDependencyList = () => {
-    const deps = Object.keys(this.state.dependencyTree);
-    const items = _.map(deps, (dep, index) => <li key={index}>{dep}</li>);
+    // const deps = Object.keys(this.state.dependencyTree);
+    // console.log(deps);
+    // _.forEach(deps, (key, value) => console.log(value + ": " + key));
+    const items = _.map(this.state.dependencyTree, (key, value) => (
+      <li key={value}>{value + ": " + key}</li>
+    ));
     return <ul>{items}</ul>;
   };
   render() {
@@ -106,7 +110,7 @@ export default class App extends React.Component {
             : ""}
           {/* {this.state.dependencyTree.length !== 0 ?
             <TreeMenu data={this.getTree()}/> : ''} */}
-          <TreeMenu data={treeData} />
+          {/* <TreeMenu data={treeData} /> */}
         </div>
       </div>
     );
