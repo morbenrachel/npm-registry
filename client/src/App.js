@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import constants from "./constants";
 import "./App.css";
 import _ from "lodash";
@@ -61,6 +60,7 @@ export default class App extends React.Component {
 
   fetchPackageAsync = async searchValue => {
     try {
+      console.log("fetch in client");
       const response = await fetch(`/package/${searchValue}`);
       if (!response.ok) {
         throw response;
