@@ -56,7 +56,7 @@ export default class App extends React.Component {
   getDepTree = npmPackage => {
     if (!_.isEmpty(_.get(npmPackage, "dependencies", {}))) {
       return (
-        <ul>
+        <ul key={npmPackage.name}>
           {npmPackage.name}
           {_.map(npmPackage.dependencies, item => {
             return this.getDepTree(item);
