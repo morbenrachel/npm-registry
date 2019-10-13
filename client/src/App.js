@@ -63,7 +63,7 @@ export default class App extends React.Component {
           })}
         </ul>
       );
-    } else if (npmPackage.name) {
+    } else if (!_.isEmpty(_.get(npmPackage, "name", {}))) {
       return <li key={npmPackage.name}>{npmPackage.name}</li>;
     }
   };
